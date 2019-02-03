@@ -1,0 +1,86 @@
+@mixin centY {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin stretch {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0
+}
+
+@mixin cent {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin centX {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@function pxtopercent($target, $parent: 1170) {
+	@return percentage($target / $parent);
+}
+
+@mixin clearfix {
+	&:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+
+@mixin triangle($direction, $color: currentcolor, $width: 1em , $height: 2em) {
+	@if not index(top right bottom left, $direction) {
+		@error "Direction must be either `top`, `right`, `bottom` or `left`.";
+	}
+
+	width: 0;
+	height: 0;
+	content: '';
+	z-index: 2;
+
+	border-#{$direction}: $width solid $color;
+
+	$perpendicular-borders: ($height/2) solid transparent;
+
+	@if $direction == top or $direction == bottom {
+		border-left:   $perpendicular-borders;
+		border-right:  $perpendicular-borders;
+	} 
+	@else if $direction == right or $direction == left {
+		border-bottom: $perpendicular-borders;
+		border-top:    $perpendicular-borders;
+	}
+}
+
+
+@mixin img-gradient($color, $opacity) {
+	&:after {
+		content: "";
+		@include stretch;
+		border-radius: 50%;
+		background-image: linear-gradient(0deg, rgba($color, $opacity));
+	}
+}
+
+@mixin scrollbar($width, $color) {
+	overflow-y: scroll;
+	
+	&::-webkit-scrollbar {
+		width: $width;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 2px;
+		box-shadow: inset $width*2 0 0  $color;
+	}
+}

@@ -1,0 +1,17 @@
+%main-hover {
+	transition: all .15s;
+	&:hover {
+		color: $main-color;
+	}
+}
+
+
+%svg-right {
+	svg {
+		@include centY;
+		right: 0;
+		color: $main-color;
+		font-size: 2.3rem;
+	}
+}
+

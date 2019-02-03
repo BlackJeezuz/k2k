@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Credit-page</title>
+	<link rel="stylesheet" href="dist/css/jquery-ui.css">
+	<link rel="stylesheet" href="dist/css/styles.css">
+</head>
+<body>
+	<header class="header">	
+		<div class="header__top">
+			<div class="container">
+				<p class="header__login">
+					Добро пожаловать <a href="#">Войти</a> или <a href="#">Зарегестрироватся</a>
+				</p>
+				<nav class="header__top-nav">
+					<a href="#">Переводы</a>
+					<a href="#">Вопрос-ответ</a>
+					<a href="#">Получить кредит</a>
+					<a href="#">Контакты</a>
+				</nav>
+				<ul class="header__social">
+					<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<main class="header__main">
+			<div class="container">
+				<a href='index.html' class="b-logo">
+					<img src="dist/img/logo.png" alt="logo">
+				</a>
+
+				<button class="mobile-menu">
+					<div class="mobile-menu__sandwich">
+						<span class="mobile-menu__topper"></span>
+						<span class="mobile-menu__middle"></span>
+						<span class="mobile-menu__footer"></span>
+					</div>
+					<span class="mobile-menu__text">Меню</span>
+				</button>
+
+				<nav class="header__main-nav">
+					<a href="transfer-page.html">Переводы</a>
+					<a href="#">Преимущества</a>
+					<a href="#">Бизнесу</a>
+					<a href="#">Благотворительность</a>
+					<a href="private.html">Мой кабинет <i class="fas fa-sign-out-alt"></i></a>
+				</nav>
+			</div>
+		</main>
+	</header>
+
+	<section class="section">
+		<div class="container">
+			<h2 class="section-title">Оформить кредит</h2>
+			<form action="#" class="form-credit">
+				<h3 class="form-credit__title">Сумма кредита</h3>
+				<div class="form-slider">
+					<div id="credit-slider">
+						<div class="ui-slider-helper">
+							<a class='ui-slider-handle'>
+								<span class="ui-slider-val">0 грн</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<h3 class="form-credit__title">Строк кредита</h3>
+
+				<div class="form-slider">
+					<div id="termin-slider">
+						<div class="ui-slider-helper">
+							<a class='ui-slider-handle'>
+								<span class="ui-slider-val">0 дней</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<fieldset class="form-credit__field">
+					<div class="form-credit__item">
+						<label for="credit-name" class="form-credit__label">ФИО</label>
+						<input id="credit-name" type="text" class="form-credit__input" placeholder="Ведите ФИО" required>
+					</div>
+					<div class="form-credit__item">
+						<label for="credit-phone" class="form-credit__label">Номер телефона</label>
+						<input id="credit-phone" type="tel" class="form-credit__input form-credit__input--tel" placeholder="+38 (_ _ _) _ _ _  _ _ _ _" required>
+					</div>
+					<div class="form__item-multiple">
+						<div class="form-credit__item">
+							<label for="credit-passport" class="form-credit__label">Серия паспорта</label>
+							<input id="credit-seria" type="text" class="form-credit__input form-credit__input--serial" placeholder="XX" maxlength="2" required>
+						</div>
+						<div class="form-credit__item">
+							<label for="credit-seria-num" class="form-credit__label">Номер паспорта</label>
+							<input id="credit-seria-num" type="tel" class="form-credit__input form-credit__input--serial-num" placeholder="XXXXXX" maxlength="6" required>
+						</div>
+					</div>
+
+					<div class="form-credit__item">
+						<label for="credit-id" class="form-credit__label">ИНН</label>
+						<input id="credit-id" type="text" class="form-credit__input form-credit__input--serial-id" placeholder="XXXXXXXXXX" maxlength="10" required>
+					</div>
+					<div class="form-credit__item">
+						<label for="credit-mail" class="form-credit__label">Почта</label>
+						<input id="credit-mail" type="text" class="form-credit__input" placeholder="Введите ваш e-mail" required>
+					</div>
+
+					<div class="b-checkbox">
+						<input id="credit-check" type="checkbox">
+						<label for="credit-check">Я соглашаюсь с <a href="#" class="b-checkbox__link">правилами обработки данных</a></label>	
+					</div>
+
+					<button class="form__btn-apply">Отправить</button>
+				</fieldset>
+			</form>
+		</div>
+	</section>
+
+	<section class="s-info">
+		<div class="container">
+			<div class="s-info__img">
+				<img src="dist/img/credit-cards.png" alt="credit-cards">
+			</div>
+			<div class="s-info__content">
+				<h2 class="s-info__title">Получай решение онлайн без звонка</h2>
+				<p class="s-info__text">Просто зарегистрируйтесь на сайте и получите уникальное придложение от нашего сервиса</p>
+				<div class="btn-group">
+					<button class="btn btn-prime btnRegistration">Регистрация</button>
+					<button class="btn btn-prime btnLogin">Вход</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<a href='#' class="b-logo">
+				<img src="dist/img/logo.png" alt="logo">
+			</a>
+			<ul class="footer__nav">
+				<li><a href="#" class="footer__nav-link">История</a></li>
+				<li><a href="#" class="footer__nav-link">Правовая информация</a></li>
+				<li><a href="#" class="footer__nav-link">Гарантии</a></li>
+				<li><a href="#" class="footer__nav-link">Контакты</a></li>
+			</ul>
+			<ul class="footer__nav">
+				<li><a href="#" class="footer__nav-link">Вход/Регистрация</a></li>
+				<li><a href="#" class="footer__nav-link">Преимущества</a></li>
+				<li><a href="#" class="footer__nav-link">Бизнесу</a></li>
+				<li><a href="#" class="footer__nav-link">Благотворительность</a></li>
+			</ul>
+			<ul class="footer__nav">		     
+				<li><a href="#" class="footer__nav-link">Кредиты</a></li>
+				<li><a href="#" class="footer__nav-link">Получить Кредит</a></li>
+				<li><a href="#" class="footer__nav-link">Ограничения</a></li>
+				<li><a href="#" class="footer__nav-link">Правовая информация</a></li>
+				<li><a href="#" class="footer__nav-link">Погасить кредит</a></li>
+			</ul>
+
+			<div class="footer__contacts">
+				<h3 class="footer-title">Контакты</h3>
+				<ul class="footer__contacts-list">
+					<li><a href="tel:+380636047474"><i class="fab fa-telegram"></i>+380636047474</a></li>
+					<li><a href="tel:+380636047474"><i class="fas fa-phone"></i> +380636047474</a></li>
+					<li><a href="mailto:mail.gmail.com"><i class="fas fa-envelope"></i>
+					mail.gmail.com</a></li>
+				</ul>
+			</div>
+
+			<div class="footer__payment">
+				<h3 class="footer-title footer__payment-title">Мы принимаем</h3>
+				<i class="fab fa-cc-visa"></i>
+				<i class="fab fa-cc-mastercard"></i>
+				<i class="fab fa-cc-discover"></i>
+				<i class="fab fa-cc-amex"></i>
+				<i class="fab fa-cc-stripe"></i>
+				<i class="fab fa-cc-paypal"></i>
+				<div class="footer__payment-item"></div>
+				<div class="footer__payment-item"></div>
+				<div class="footer__payment-item"></div>
+				<div class="footer__payment-item"></div>
+				<div class="footer__payment-item"></div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="popup">
+		<form id="form-quest" action="#" class="form popup-content">
+			<h3 class="form__title">Есть вопросы? Задайте их нам</h3>
+			<select class="form__item select">
+				<option value="Тема">Тема</option>
+				<option value="Тема">Тема</option>
+			</select>
+
+			<input class="form__item input" type="mail" placeholder="E-mail" required>
+			<input class="form__item input" type="text" placeholder="Имя" required>
+			<input class="form__item input" type="text" placeholder="Ваш вопрос" required>
+
+			<button type="submit" class="btn form__btn">Отправить</button>
+
+			<span class="popup__close"></span>
+		</form>
+
+		<form id="form-reg" action="#" class="form popup-content">
+			<h3 class="form__title">Регистрация</h3>
+			<input class="form__item input" type="tel" placeholder="Телефон" required>
+			<input class="form__item input" type="mail" placeholder="E-mail" required>
+			<input class="form__item input" type="text" placeholder="Имя" required>
+
+			<button type="submit" class="btn form__btn btnKeep">Продолжить</button>
+
+			<a href="#" class="form__already">У меня уже есть учетная запись</a>
+
+			<span class="popup__close"></span>
+		</form>
+
+		<form id="form-login" action="#" class="form popup-content">
+			<h3 class="form__title">Вход</h3>
+			<input class="form__item input" type="text" placeholder="Логин" required>
+			<input class="form__item input" type="password" placeholder="Пароль" required>
+
+			<button type="submit" class="btn form__btn">Войти</button>
+
+			<a href="#" class="form__already">Зарегистрироватся</a>
+
+			<span class="popup__close"></span>
+		</form>
+
+		<form id="form-confirm" action="#" class="form popup-content">
+			<h3 class="form__title">Подтверждение аккаунта</h3>
+			<p class="form__message">На ваш номер отправлено смс с шестизначним кодом. <br> Введите код, что бы подтвердить номер</p>
+
+			<input type="text" class="input input--code" placeholder="XXXXXX" maxlength="6" required>
+
+			<button type="submit" class="btn form__btn">Отправить</button>
+			<button class="form__already  form__already--btn">Отправить код повторно</button>
+
+			<span class="popup__close"></span>
+		</form>
+		<form id="form-apply" action="#" class="form popup-content">
+			<h3 class="form__title">Заявить о мошеннике</h3>
+			<select class="form__item select">
+				<option value="Тема">Площадка</option>
+				<option value="Тема">Тема</option>
+			</select>
+
+			<input class="form__item input" type="tel" placeholder="Номер карты" required>
+			<input class="form__item input" type="text" placeholder="ФИО владельца" required>
+
+
+			<div class="doc-box">
+				<label class="doc-add">
+					<input type="file">	
+					<span class="doc-add__icon">
+						<i class="far fa-file"></i>
+					</span>
+
+					<span class="doc-add__text">Добавить файл</span>
+				</label>
+			</div>
+
+			<button type="submit" class="btn form__btn">Отправить</button>
+
+			<span class="popup__close"></span>
+		</form>
+
+		<form id="form-password" action="#" class="form popup-content">
+			<h3 class="form__title">Восстновление пароля</h3>
+
+			<div class="validation-box">
+				<input class="form__item input" type="password" placeholder="Новый пароль" required>
+				<i class="fas fa-snowflake"></i>
+			</div>
+
+			<div class="validation-box">
+				<input class="form__item input" type="password" placeholder="Повторить пароль" required>
+				<i class="fas fa-snowflake"></i>
+			</div>
+
+			<div class="validation-error"><i class="fas fa-snowflake"></i> Поле заполнено неверно</div>
+			<button type="submit" class="btn form__btn">Отправить</button>
+
+			<span class="popup__close"></span>
+		</form>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script src="dist/libs/common.js"></script>
+</body>
+</html>
